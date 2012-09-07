@@ -9,6 +9,10 @@ function copy() {
 	cat "$*" | /usr/bin/pbcopy
 }
 
+function psize(){
+	pbpaste | wc
+}
+
 function pste() {
 	if [ ! $(uname) = "Darwin" ]
 	then
