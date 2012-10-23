@@ -24,3 +24,19 @@ function pste() {
 function prev(){
  open -a "Preview" $1 &
 }
+
+function mvnTest(){
+	mvn test; growlnotify -s -m "TESTS Finished"
+}
+
+function subGitDiff(){
+	git diff -w $1 | subl -n -w
+}
+
+function mdj(){
+	mvnDebug jetty:run | while read; do if [[ $REPLY =~ "Started Jetty Server" ]]; then
+    	growlnotify -s -m "Server UP"
+	  fi
+	  echo "$REPLY"
+	done
+}
