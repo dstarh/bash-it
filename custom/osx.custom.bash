@@ -21,6 +21,7 @@ function pste() {
 	fi
 	/usr/bin/pbpaste > $1
 }
+
 function prev(){
  open -a "Preview" $1 &
 }
@@ -28,4 +29,4 @@ function prev(){
 
 function subGitDiff(){
 	git diff -w $1 | subl -n -w
-}`
+}
