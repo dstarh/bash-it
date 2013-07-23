@@ -1,1 +1,0 @@
-../available/rails.completion.bash
